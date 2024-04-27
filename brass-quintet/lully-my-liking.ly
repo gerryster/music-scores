@@ -31,7 +31,6 @@ horn = \new Voice { \transpose f c
 
 trombone = \new Voice \relative c {
   \clef bass
-
     \time 3/4 e4 c d
   | \time 4/4 e c d e
   | b d b b
@@ -60,8 +59,8 @@ cello = \new Voice \relative c' {
     << \key g \major \horn >>
     \new Staff \with { instrumentName = "Trombone" }
     << \global \trombone >>
-    \new Staff \with { instrumentName = "Tuba" }
-    << \global \cello >>
+    % \new Staff \with { instrumentName = "Tuba" }
+    % << \global \cello >>
   >>
   \layout { }
   \midi { }
