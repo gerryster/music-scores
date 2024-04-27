@@ -4,6 +4,7 @@ global= {
   \key c \major
 }
 
+% TODO: lyrics
 trumpets = \new Voice { \transpose bes c'
     \relative c'' {
       \time 3/4 c4 a b
@@ -48,6 +49,10 @@ cello = \new Voice \relative c' {
 }
 
 \score {
+  \header {
+    piece = "Refrain"
+  }
+  % TODO: tempo mark
   \new StaffGroup <<
     \new Staff \with { instrumentName = "Trumpets" }
     << \key d \major \trumpets >>
