@@ -13,22 +13,31 @@ global= {
 
 trumpets = \new Voice { \transpose bes c'
     \relative c'' {
-    \time 3/4 c4 a b | \time 4/4 c a b c | d b a g | \time 3/4 a b c | \time 4/4 e d2 b4 | \time 3/2 g4 a b2 a
+      \time 3/4 c4 a b
+    | \time 4/4 c a b c
+    | d b a g
+    | \time 3/4 a b c\<
+    | \time 4/4 e\> d2 b4\p
+    | \time 3/2 g4 a\> b2 a\pp\fermata^\markup{\italic Fine}
     \bar "|."
   }
 }
 
 horn = \new Voice { \transpose f c
     \relative c' {
-    \time 3/4 e4 e g | \time 4/4 e e g e | g f e e | \time 3/4 c d e | \time 4/4 g g2 g4 | \time 3/2 d4 e g (fis) e2
+      \time 3/4 e4 e g
+    | \time 4/4 e e g e
+    | g f e e
+    | \time 3/4 c d e\<
+    | \time 4/4 g\> g2 g4\p
+    | \time 3/2 d4 e\> g (fis) e2\pp\fermata
     \bar "|."
   }
 }
 
-viola = \new Voice \relative c' {
-  \clef alto
-  e2 d
-  c1
+trombone = \new Voice \relative c {
+  \clef bass
+
   \bar "|."
 }
 
@@ -42,12 +51,11 @@ cello = \new Voice \relative c' {
 \score {
   \new StaffGroup <<
     \new Staff \with { instrumentName = "Trumpets" }
-    % << \key bes \major \trumpets >>
-    << \global \trumpets >>
+    << \key d \major \trumpets >>
     \new Staff \with { instrumentName = "Horn" }
-    << \global \horn >>
+    << \key g \major \horn >>
     \new Staff \with { instrumentName = "Trombone" }
-    << \global \viola >>
+    << \global \trombone >>
     \new Staff \with { instrumentName = "Tuba" }
     << \global \cello >>
   >>
