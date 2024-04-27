@@ -1,12 +1,5 @@
 \version "2.24.3"
 
-% hornMusic = \transpose c' f
-%  \relative c { d'1 fis }
-
-\relative {
-  \time 3/4 c'' a b | \time 4/4 c a b c | d b a g | \time 3/4 a b c | \time 4/4 e d2 b4 | \time 3/2 g4 a b2 a \bar "|."
-}
-
 global= {
   \key c \major
 }
@@ -38,6 +31,12 @@ horn = \new Voice { \transpose f c
 trombone = \new Voice \relative c {
   \clef bass
 
+    \time 3/4 e4 c d
+  | \time 4/4 e c d e
+  | b d b b
+  | \time 3/4 a f g\<
+  | \time 4/4 g\> b2 d4\p
+  | \time 3/2 d4 c\> d2 cis\pp\fermata
   \bar "|."
 }
 
