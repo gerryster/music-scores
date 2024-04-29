@@ -40,10 +40,14 @@ trombone = \new Voice \relative c {
   \bar "|."
 }
 
-cello = \new Voice \relative c' {
+tuba = \new Voice \relative c, {
   \clef bass
-  c2 b
-  a1
+    \time 3/4 a4 c b
+  | \time 4/4 a c b a
+  | g' d e e
+  | \time 3/4 f d c\<
+  | \time 4/4 c\> g2 g4\p
+  | \time 3/2 b a\> g2 ais\pp\fermata
   \bar "|."
 }
 
@@ -59,8 +63,8 @@ cello = \new Voice \relative c' {
     << \key g \major \horn >>
     \new Staff \with { instrumentName = "Trombone" }
     << \global \trombone >>
-    % \new Staff \with { instrumentName = "Tuba" }
-    % << \global \cello >>
+    \new Staff \with { instrumentName = "Tuba" }
+    << \global \tuba >>
   >>
   \layout { }
   \midi { }
