@@ -1,5 +1,7 @@
 \version "2.24.3"
 
+% TODO: \language english
+
 global= {
   \key c \major
 }
@@ -66,8 +68,31 @@ tuba = \new Voice \relative c, {
     \new Staff \with { instrumentName = "Tuba" }
     << \global \tuba >>
   >>
+
   \layout { }
   \midi { }
+}
+
+solo_two = \new Voice \relative c'' {
+    \time 4/4 \partial 4 a8 cis
+  | e4. cis8 cis4 b
+  | \time 3/4 a2 a4
+  | b a fis
+  | g2 fis4
+  | \time 4/4 e a a b
+  | g e fis g
+  | a fis fis8 (e) d4
+  | \time 3/4 e2.^\markup{\italic to \italic refrain}
+}
+
+\score {
+  \header {
+    piece = "Verse 2, Solo"
+  }
+  \new StaffGroup <<
+    \new Staff \with { instrumentName = "Trombone" }
+    << \global \solo_two >>
+  >>
 }
 
 \header {
