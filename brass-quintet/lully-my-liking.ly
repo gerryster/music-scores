@@ -73,6 +73,26 @@ tuba = \new Voice \relative c, {
   \midi { }
 }
 
+solo_one = \new Voice \relative c' {
+    \time 3/4 \partial 4 e4
+  | e4 fis g
+  | \time 2/4 b a
+  | \time 3/4 d c b
+  | a2 a4
+  |
+  | \time 3/4 e2.^\markup{\italic to \italic refrain}
+}
+
+\score {
+  \header {
+    piece = "Verse 1, Solo"
+  }
+  \new StaffGroup <<
+    \new Staff \with { instrumentName = "Trumpet 1" }
+    << \global \solo_one >>
+  >>
+}
+
 solo_two = \new Voice \relative c'' {
     \time 4/4 \partial 4 a8 cis
   | e4. cis8 cis4 b
