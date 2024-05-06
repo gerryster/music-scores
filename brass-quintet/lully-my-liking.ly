@@ -79,8 +79,9 @@ solo_one = \new Voice \relative c' {
   | \time 2/4 b a
   | \time 3/4 d c b
   | a2 a4
-  |
-  | \time 3/4 e2.^\markup{\italic to \italic refrain}
+  | a b c
+  | \time 4/4 b a d a
+  | \time 3/2 b a g e2. .^\markup{\italic to \italic refrain}
 }
 
 \score {
@@ -89,7 +90,7 @@ solo_one = \new Voice \relative c' {
   }
   \new StaffGroup <<
     \new Staff \with { instrumentName = "Trumpet 1" }
-    << \global \solo_one >>
+    << \key d \major \transpose bes c' \solo_one >>
   >>
 }
 
