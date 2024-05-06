@@ -82,6 +82,7 @@ solo_one = \new Voice \relative c' {
   | a b c
   | \time 4/4 b a d a
   | \time 3/2 b a g e2. .^\markup{\italic to \italic refrain}
+  \bar "|."
 }
 
 \score {
@@ -104,6 +105,7 @@ solo_two = \new Voice \relative c'' {
   | g e fs g
   | a fs fs8 (e) d4
   | \time 3/4 e2.^\markup{\italic to \italic refrain}
+  \bar "|."
 }
 
 \score {
