@@ -1,13 +1,13 @@
 \version "2.24.3"
 
-% TODO: \language english
+\language english
 
 global= {
   \key c \major
 }
 
 % TODO: lyrics
-trumpets = \new Voice { \transpose bes c'
+trumpets = \new Voice { \transpose bf c'
     \relative c'' {
       \time 3/4 c4 a b
     | \time 4/4 c a b c
@@ -26,7 +26,7 @@ horn = \new Voice { \transpose f c
     | g f e e
     | \time 3/4 c d e\<
     | \time 4/4 g\> g2 g4\p
-    | \time 3/2 d4 e\> g (fis) e2\pp\fermata
+    | \time 3/2 d4 e\> g (fs) e2\pp\fermata
     \bar "|."
   }
 }
@@ -38,7 +38,7 @@ trombone = \new Voice \relative c {
   | b d b b
   | \time 3/4 a f g\<
   | \time 4/4 g\> b2 d4\p
-  | \time 3/2 d4 c\> d2 cis\pp\fermata
+  | \time 3/2 d4 c\> d2 cs\pp\fermata
   \bar "|."
 }
 
@@ -49,7 +49,7 @@ tuba = \new Voice \relative c, {
   | g' d e e
   | \time 3/4 f d c\<
   | \time 4/4 c\> g2 g4\p
-  | \time 3/2 b a\> g2 ais\pp\fermata
+  | \time 3/2 b a\> g2 as\pp\fermata
   \bar "|."
 }
 
@@ -75,7 +75,7 @@ tuba = \new Voice \relative c, {
 
 solo_one = \new Voice \relative c' {
     \time 3/4 \partial 4 e4
-  | e4 fis g
+  | e4 fs g
   | \time 2/4 b a
   | \time 3/4 d c b
   | a2 a4
@@ -90,19 +90,19 @@ solo_one = \new Voice \relative c' {
   }
   \new StaffGroup <<
     \new Staff \with { instrumentName = "Trumpet 1" }
-    << \key d \major \transpose bes c' \solo_one >>
+    << \key d \major \transpose bf c' \solo_one >>
   >>
 }
 
 solo_two = \new Voice \relative c'' {
-    \time 4/4 \partial 4 a8 cis
-  | e4. cis8 cis4 b
+    \time 4/4 \partial 4 a8 cs
+  | e4. cs8 cs4 b
   | \time 3/4 a2 a4
-  | b a fis
-  | g2 fis4
+  | b a fs
+  | g2 fs4
   | \time 4/4 e a a b
-  | g e fis g
-  | a fis fis8 (e) d4
+  | g e fs g
+  | a fs fs8 (e) d4
   | \time 3/4 e2.^\markup{\italic to \italic refrain}
 }
 
