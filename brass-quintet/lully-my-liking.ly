@@ -95,7 +95,7 @@ solo_one = \new Voice \relative c' {
   >>
 }
 
-solo_two = \new Voice \relative c {
+solo_two = \new Voice \relative c'' {
     \time 4/4 \partial 4 a8 cs
   | e4. cs8 cs4 b
   | \time 3/4 a2 a4
@@ -114,7 +114,7 @@ solo_two = \new Voice \relative c {
   }
   \new StaffGroup <<
     \new Staff \with { instrumentName = "Tuba" }
-    << \global \clef bass { \solo_two } >>
+    << \global \clef bass \transpose c'' c { \solo_two } >>
   >>
 }
 
