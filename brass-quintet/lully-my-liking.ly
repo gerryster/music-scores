@@ -95,7 +95,7 @@ solo_one = \new Voice \relative c' {
   >>
 }
 
-solo_two = \new Voice \relative c'' {
+solo_two = \new Voice \relative c {
     \time 4/4 \partial 4 a8 cs
   | e4. cs8 cs4 b
   | \time 3/4 a2 a4
@@ -113,8 +113,24 @@ solo_two = \new Voice \relative c'' {
     piece = "Verse 2, Solo"
   }
   \new StaffGroup <<
-    \new Staff \with { instrumentName = "Trombone" }
-    << \global \solo_two >>
+    \new Staff \with { instrumentName = "Tuba" }
+    << \global \clef bass { \solo_two } >>
+  >>
+}
+
+solo_three = \new Voice \relative c'' {
+    \time 3/2 \partial 4 a8 cs
+  | \time 3/4 e2.^\markup{\italic to \italic refrain}
+  \bar "|."
+}
+
+\score {
+  \header {
+    piece = "Verse 3, Solo"
+  }
+  \new StaffGroup <<
+    \new Staff \with { instrumentName = "TBD" }
+    << \global \solo_three >>
   >>
 }
 
