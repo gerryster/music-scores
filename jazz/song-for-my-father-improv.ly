@@ -44,10 +44,10 @@ solo = \relative c'' {
   % F7 Ef7
   | ef8. ef16 f4 f8. f16 g4
   % D7
-  | r4 fs8. fs16 a4 r4
+  | r4 fs8. fs16 a4\bendAfter #-4 r4
   | r1
   % Gm7
-  | a4 r4 r2
+  | a4\bendAfter #-4 r4 r2
   \bar "|."
 }
 
