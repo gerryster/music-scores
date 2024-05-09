@@ -30,7 +30,7 @@ solo = \relative c'' {
   % Ef7
   | g'8 f8 ef8 df8 f2
   % D7
-  | a4. (b8 b2)
+  | a4. (b8 ~b2)
   | r1
   | r1
 
