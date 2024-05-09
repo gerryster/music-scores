@@ -138,6 +138,42 @@ solo_three = \new Voice \relative c' {
   >>
 }
 
+verse_four_trumpets = \new Voice { \transpose bf c
+  \relative c''' {
+    | \time 4/4 e4. d8 cs4 a
+    | b b a a
+    | b cs a fs
+    | \time 3/4 g2.
+    | g4 g g
+    | c2 g4
+    | \time 2/4 c d
+    | \time 3/4 <e c>2 <e c>4
+    | \time 2/4 <e c>4 <e c>4
+    | \time 3/4 <f c>2 <e c>4
+    | d2.^\markup{\italic to \italic refrain}
+    \bar "|."
+  }
+}
+
+\score {
+  \header {
+    piece = "Verse 4, Full"
+  }
+  \new StaffGroup <<
+    \new Staff \with { instrumentName = "Trumpets" }
+    << \key d \major \verse_four_trumpets >>
+    % \new Staff \with { instrumentName = "Horn" }
+    % << \key g \major \horn >>
+    % \new Staff \with { instrumentName = "Trombone" }
+    % << \global \trombone >>
+    % \new Staff \with { instrumentName = "Tuba" }
+    % << \global \tuba >>
+  >>
+
+  \layout { }
+  \midi { }
+}
+
 \header {
   title  = "Lully My Liking"
   subtitle = "Words from Sloane MS. 15th cent."
