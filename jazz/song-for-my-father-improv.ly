@@ -63,5 +63,5 @@ solo = \relative c'' {
 
 \header {
   title  = "Song for My Father"
-  subtitle = "B Flat Instrument Solo"
+  subtitle = "B♭ Instrument Solo"
 }
