@@ -31,8 +31,8 @@ horn = \new Voice { \transpose f c
   }
 }
 
-trombone = \new Voice \relative c {
-  \clef bass
+trombone = \new Voice \relative c' {
+  \clef tenor
     \time 3/4 e4 c d
   | \time 4/4 e c d e
   | b d b b
@@ -42,7 +42,7 @@ trombone = \new Voice \relative c {
   \bar "|."
 }
 
-tuba = \new Voice \relative c, {
+tuba = \new Voice \relative c {
   \clef bass
     \time 3/4 a4 c b
   | \time 4/4 a c b a
@@ -134,7 +134,7 @@ solo_three = \new Voice \relative c' {
   }
   \new StaffGroup <<
     \new Staff \with { instrumentName = "Trombone" }
-    << \global \clef bass \transpose c'' c' \solo_three >>
+    << \global \clef tenor \transpose c'' c' \solo_three >>
   >>
 }
 
