@@ -150,7 +150,60 @@ verse_four_trumpets = \new Voice { \transpose bf c
     | \time 3/4 <e c>2 <e c>4
     | \time 2/4 <e c>4 <e c>4
     | \time 3/4 <f c>2 <e c>4
-    | d2.^\markup{\italic to \italic refrain}
+    | <d a>2.^\markup{\italic to \italic refrain}
+    \bar "|."
+  }
+}
+
+verse_four_horn = \new Voice { \transpose f c
+  \relative c'' {
+    | \time 4/4 r1
+    | r1
+    | r1
+    | \time 3/4 r2.
+    | g4 g g
+    | c2 g4
+    | \time 2/4 e g
+    | \time 3/4 g2 g4
+    | \time 2/4 g g
+    | \time 3/4 a2 g4
+    | fs2.
+    \bar "|."
+  }
+}
+
+verse_four_trombone = \new Voice {
+  \relative c' {
+    \clef tenor
+    | \time 4/4 e4. d8 cs4 a
+    | b b a a
+    | b cs a fs
+    | \time 3/4 g2.
+    | g4 g g
+    | c2 d4
+    | \time 2/4 c d
+    | \time 3/4 e2 e4
+    | \time 2/4 e e
+    | \time 3/4 c2 c4
+    | a2.
+    \bar "|."
+  }
+}
+
+verse_four_tuba = \new Voice {
+  \relative c {
+     \clef bass
+    | \time 4/4 r1
+    | r1
+    | r1
+    | \time 3/4 r2.
+    | g4 g g
+    | c2 g4
+    | \time 2/4 a g
+    | \time 3/4 c2 c4
+    | \time 2/4 c c
+    | \time 3/4 f,2 c4
+    | d2.
     \bar "|."
   }
 }
@@ -162,12 +215,12 @@ verse_four_trumpets = \new Voice { \transpose bf c
   \new StaffGroup <<
     \new Staff \with { instrumentName = "Trumpets" }
     << \key d \major \verse_four_trumpets >>
-    % \new Staff \with { instrumentName = "Horn" }
-    % << \key g \major \horn >>
-    % \new Staff \with { instrumentName = "Trombone" }
-    % << \global \trombone >>
-    % \new Staff \with { instrumentName = "Tuba" }
-    % << \global \tuba >>
+    \new Staff \with { instrumentName = "Horn" }
+    << \key g \major \verse_four_horn >>
+    \new Staff \with { instrumentName = "Trombone" }
+    << \global \verse_four_trombone >>
+    \new Staff \with { instrumentName = "Tuba" }
+    << \global \verse_four_tuba >>
   >>
 
   \layout { }
