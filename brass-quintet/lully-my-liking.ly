@@ -2,6 +2,13 @@
 
 \language english
 
+\header {
+  title  = "Lully My Liking"
+  subtitle = "Words from Sloane MS. 15th cent."
+  composer = "Gustav Holst"
+  arranger = "arr. Ryan Gerry"
+}
+
 global= {
   \key c \major
 }
@@ -81,7 +88,7 @@ solo_one = \new Voice \relative c' {
   | a2 a4
   | a b c
   | \time 4/4 b a d a
-  | \time 3/2 b a g e2. .^\markup{\italic to \italic refrain}
+  | \time 3/2 b a g e2.^\markup{\italic to \italic refrain}
   \bar "|."
 }
 
@@ -225,11 +232,4 @@ verse_four_tuba = \new Voice {
 
   \layout { }
   \midi { }
-}
-
-\header {
-  title  = "Lully My Liking"
-  subtitle = "Words from Sloane MS. 15th cent."
-  composer = "Gustav Holst"
-  arranger = "arr. Ryan Gerry"
 }
