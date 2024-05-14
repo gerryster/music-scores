@@ -233,3 +233,24 @@ verse_four_tuba = \new Voice {
   \layout { }
   \midi { }
 }
+
+solo_five = \new Voice \relative c'' {
+  \time 5/4 e4. d8 cs4 a b
+  | \time 3/2 a a b cs a fs
+  | \time 3/4 g2 fs4
+  | \time 4/4 e a a b
+  | \time 3/4 g e g
+  | a fs8 (e) d4
+  | e2.^\markup{\italic to \italic refrain}
+  \bar "|."
+}
+
+\score {
+  \header {
+    piece = "Verse 5, Solo"
+  }
+  \new StaffGroup <<
+    \new Staff \with { instrumentName = "Trombone" }
+    << \global \clef tenor \transpose c'' c' \solo_five >>
+  >>
+}
