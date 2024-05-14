@@ -100,6 +100,9 @@ solo_one = \new Voice \relative c' {
     \new Staff \with { instrumentName = "Trumpet 1" }
     << \key d \major \transpose bf c' \solo_one >>
   >>
+
+  \layout { }
+  \midi { }
 }
 
 solo_two = \new Voice \relative c'' {
@@ -123,6 +126,9 @@ solo_two = \new Voice \relative c'' {
     \new Staff \with { instrumentName = "Tuba" }
     << \global \clef bass \transpose c'' c { \solo_two } >>
   >>
+
+  \layout { }
+  \midi { }
 }
 
 solo_three = \new Voice \relative c' {
@@ -143,6 +149,9 @@ solo_three = \new Voice \relative c' {
     \new Staff \with { instrumentName = "Trombone" }
     << \global \clef tenor \transpose c'' c' \solo_three >>
   >>
+
+  \layout { }
+  \midi { }
 }
 
 verse_four_trumpets = \new Voice { \transpose bf c
@@ -250,7 +259,11 @@ solo_five = \new Voice \relative c'' {
     piece = "Verse 5, Solo"
   }
   \new StaffGroup <<
-    \new Staff \with { instrumentName = "Trombone" }
-    << \global \clef tenor \transpose c'' c' \solo_five >>
+    \new Staff \with { instrumentName = "Horn" }
+    % TODO: handle the rest of the transposing like this, or better yet, in a variable!
+    << \key g \major \transpose f c \solo_five >>
   >>
+
+  \layout { }
+  \midi { }
 }
