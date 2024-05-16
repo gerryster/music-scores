@@ -16,7 +16,7 @@ global= {
 % TODO: lyrics
 trumpets = \new Voice { \transpose bf c'
     \relative c'' {
-      \time 3/4 c4 a b
+      \time 3/4 c4\p a b
     | \time 4/4 c a b c
     | d b a g
     | \time 3/4 a b c\<
@@ -28,7 +28,7 @@ trumpets = \new Voice { \transpose bf c'
 
 horn = \new Voice { \transpose f c
     \relative c' {
-      \time 3/4 e4 e g
+      \time 3/4 e4\p e g
     | \time 4/4 e e g e
     | g f e e
     | \time 3/4 c d e\<
@@ -40,7 +40,7 @@ horn = \new Voice { \transpose f c
 
 trombone = \new Voice \relative c' {
   \clef tenor
-    \time 3/4 e4 c d
+    \time 3/4 e4\p c d
   | \time 4/4 e c d e
   | b d b b
   | \time 3/4 a f g\<
@@ -51,7 +51,7 @@ trombone = \new Voice \relative c' {
 
 tuba = \new Voice \relative c {
   \clef bass
-    \time 3/4 a4 c b
+    \time 3/4 a4\p c b
   | \time 4/4 a c b a
   | g' d e e
   | \time 3/4 f d c\<
@@ -64,10 +64,9 @@ tuba = \new Voice \relative c {
   \header {
     piece = "Refrain"
   }
-  % TODO: tempo mark
   \new StaffGroup <<
     \new Staff \with { instrumentName = "Trumpets" }
-    << \key d \major \trumpets >>
+    << \key d \major \tempo "Allegretto" \trumpets >>
     \new Staff \with { instrumentName = "Horn" }
     << \key g \major \horn >>
     \new Staff \with { instrumentName = "Trombone" }
@@ -81,7 +80,7 @@ tuba = \new Voice \relative c {
 }
 
 solo_one = \new Voice \relative c' {
-    \time 3/4 \partial 4 e4
+    \time 3/4 \partial 4 e4\p
   | e4 fs g
   | \time 2/4 b a
   | \time 3/4 d c b
@@ -106,7 +105,7 @@ solo_one = \new Voice \relative c' {
 }
 
 solo_two = \new Voice \relative c'' {
-    \time 4/4 \partial 4 a8 cs
+    \time 4/4 \partial 4 a8\mp cs
   | e4. cs8 cs4 b
   | \time 3/4 a2 a4
   | b a fs
@@ -132,7 +131,7 @@ solo_two = \new Voice \relative c'' {
 }
 
 solo_three = \new Voice \relative c' {
-    \time 3/2 \partial 4 e8 e
+    \time 3/2 \partial 4 e8\mp e
   | a4 e a8 e8 e4 e e
   | a b cs2 e,4 e
   | \time 3/4 a a b
@@ -156,11 +155,11 @@ solo_three = \new Voice \relative c' {
 
 verse_four_trumpets = \new Voice { \transpose bf c
   \relative c''' {
-    | \time 4/4 e4. d8 cs4 a
+    | \time 4/4 e4.\mf d8 cs4 a
     | b b a a
     | b cs a fs
     | \time 3/4 g2.
-    | g4 g g
+    | g4\f g g
     | c2 g4
     | \time 2/4 c d
     | \time 3/4 <e c>2 <e c>4
@@ -177,7 +176,7 @@ verse_four_horn = \new Voice { \transpose f c
     | r1
     | r1
     | \time 3/4 r2.
-    | g4 g g
+    | g4\f g g
     | c2 g4
     | \time 2/4 e g
     | \time 3/4 g2 g4
@@ -191,11 +190,11 @@ verse_four_horn = \new Voice { \transpose f c
 verse_four_trombone = \new Voice {
   \relative c' {
     \clef tenor
-    | \time 4/4 e4. d8 cs4 a
+    | \time 4/4 e4.\mf d8 cs4 a
     | b b a a
     | b cs a fs
     | \time 3/4 g2.
-    | g4 g g
+    | g4\f g g
     | c2 d4
     | \time 2/4 c d
     | \time 3/4 e2 e4
@@ -213,7 +212,7 @@ verse_four_tuba = \new Voice {
     | r1
     | r1
     | \time 3/4 r2.
-    | g4 g g
+    | g4\f g g
     | c2 g4
     | \time 2/4 a g
     | \time 3/4 c2 c4
@@ -244,7 +243,7 @@ verse_four_tuba = \new Voice {
 }
 
 solo_five = \new Voice \relative c'' {
-  \time 5/4 e4. d8 cs4 a b
+  \time 5/4 e4.\mp d8 cs4 a b
   | \time 3/2 a a b cs a fs
   | \time 3/4 g2 fs4
   | \time 4/4 e a a b
