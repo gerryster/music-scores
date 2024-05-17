@@ -9,7 +9,7 @@
   arranger = "arr. Ryan Gerry"
   tagline = \markup \center-column \fontsize #-3 {
    "Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0) license for distribution. No limitations for performance."
-   "Additional licencing information and Lilypond source code at https://github.com/gerryster/music-scores."
+   "Additional licensing information and Lilypond source code at https://github.com/gerryster/music-scores."
    }
 }
 
