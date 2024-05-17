@@ -4,9 +4,13 @@
 
 \header {
   title  = "Lully My Liking"
-  subtitle = "Words from Sloane MS. 15th cent."
+  subtitle = "Words from Sloane MS. 15th century"
   composer = "Gustav Holst"
   arranger = "arr. Ryan Gerry"
+  tagline = \markup \center-column \fontsize #-3 {
+   "Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0) license for distribution. No limitations for performance."
+   "Additional licencing information and Lilypond source code at https://github.com/gerryster/music-scores."
+   }
 }
 
 global= {
