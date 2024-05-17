@@ -21,7 +21,7 @@ trumpets = \new Voice { \transpose bf c'
     | d b a g
     | \time 3/4 a b c\<
     | \time 4/4 e\> d2 b4\p
-    | \time 3/2 g4 a\> b2 a\pp\fermata^\markup{\italic Fine}
+    | \time 6/4 g4 a\> b2 a\pp\fermata^\markup{\italic Fine}
     \bar "|."
   }
 }
@@ -33,7 +33,7 @@ horn = \new Voice { \transpose f c
     | g f e e
     | \time 3/4 c d e\<
     | \time 4/4 g\> g2 g4\p
-    | \time 3/2 d4 e\> g (fs) e2\pp\fermata
+    | \time 6/4 d4 e\> g (fs) e2\pp\fermata
     \bar "|."
   }
 }
@@ -45,7 +45,7 @@ trombone = \new Voice \relative c' {
   | b d b b
   | \time 3/4 a f g\<
   | \time 4/4 g\> b2 d4\p
-  | \time 3/2 d4 c\> d2 cs\pp\fermata
+  | \time 6/4 d4 c\> d2 cs\pp\fermata
   \bar "|."
 }
 
@@ -56,7 +56,7 @@ tuba = \new Voice \relative c {
   | g' d e e
   | \time 3/4 f d c\<
   | \time 4/4 c\> g2 g4\p
-  | \time 3/2 b a\> g2 as\pp\fermata
+  | \time 6/4 b a\> g2 as\pp\fermata
   \bar "|."
 }
 
@@ -87,7 +87,7 @@ solo_one = \new Voice \relative c' {
   | a2 a4
   | a b c
   | \time 4/4 b a d a
-  | \time 3/2 b a g e2.^\markup{\italic to \italic refrain}
+  | \time 6/4 b a g e2.^\markup{\italic to \italic refrain}
   \bar "|."
 }
 
@@ -131,7 +131,7 @@ solo_two = \new Voice \relative c'' {
 }
 
 solo_three = \new Voice \relative c' {
-    \time 3/2 \partial 4 e8\mp e
+    \time 6/4 \partial 4 e8\mp e
   | a4 e a8 e8 e4 e e
   | a b cs2 e,4 e
   | \time 3/4 a a b
@@ -244,7 +244,7 @@ verse_four_tuba = \new Voice {
 
 solo_five = \new Voice \relative c'' {
   \time 5/4 e4.\mp d8 cs4 a b
-  | \time 3/2 a a b cs a fs
+  | \time 6/4 a a b cs a fs
   | \time 3/4 g2 fs4
   | \time 4/4 e a a b
   | \time 3/4 g e g
