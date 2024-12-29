@@ -70,7 +70,7 @@ tuba = \new Voice \relative c {
   }
   \new StaffGroup <<
     \new Staff \with { instrumentName = "Trumpets" }
-    << \key d \major \tempo "Allegretto" \trumpets >>
+    << \key d \major \tempo "Allegretto, freely" \trumpets >>
     \new Staff \with { instrumentName = "Horn" }
     << \key g \major \horn >>
     \new Staff \with { instrumentName = "Trombone" }
